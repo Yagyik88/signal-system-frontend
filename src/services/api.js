@@ -1,9 +1,9 @@
 import axios from "axios";
 
-console.log("VITE_API_BASE_URL =", import.meta.env.VITE_API_BASE_URL);
-
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL
+  baseURL:
+    import.meta.env.VITE_API_BASE_URL ||
+    "https://signal-system-backend.onrender.com/api"
 });
 
 export default API;
